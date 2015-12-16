@@ -1,0 +1,26 @@
+//通过$ajax传递参数时，如果是简单的参数，可以直接data：{key:value...}的方式传递，不用设置contentType
+//因为简单参数时，会根据命名匹配来传递参数给controller
+  demo.js
+  $(document).ready(function(){
+    var person={"id":"001","name":"jordan","age":20,"gender":true,"city":"chicago"};
+    $.ajax(
+      url:"test/testAction1",
+      type:"post",
+      data:person,
+      dataType:"json",
+      success:function(result){
+        ...
+      }
+    );
+  });
+  
+  
+  //but how can i transmit a array to an action?like below...
+  //who can tell me?
+  var param={username:$("#username").val(),
+				password:$("#password").val(),
+				stars:[{"name":"wade","position":"SG","salary":2000},
+				         {"name":"lebron","position":"SF","salary":2100},
+				         {"name":"kobe","position":"SG","salary":2500}]
+		};
+		//返回的数据stars:null，为什么获取不到呢
