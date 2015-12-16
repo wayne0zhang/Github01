@@ -24,3 +24,5 @@
 				         {"name":"kobe","position":"SG","salary":2500}]
 		};
 		//返回的数据stars:null，为什么获取不到呢
+
+	//stars的构建需要stars[i].name.....这样就可以在action端取得参数
